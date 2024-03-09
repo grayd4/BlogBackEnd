@@ -9,6 +9,7 @@ namespace BlogBackEnd
 {
     internal class BlogPost
     {
+        [Key]
         public Guid Id { get; set; }
         public string? Title { get; set; }
         public string? Content { get; set; }

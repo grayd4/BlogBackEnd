@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogBackEnd
+namespace BlogAPI.Models
 {
     internal class User
     {

@@ -5,19 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogBackEnd
+namespace BlogAPI.Models
 {
-    internal class User
+    internal class BlogPost
     {
         [Key]
         public Guid Id { get; set; }
-        public string? Name { get; set; }
+        public string? Title { get; set; }
+        public string? Content { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public DateTime? Created { get; set; }
 
         // Virtual allows lazy loading
         // Contents auto loaded when they are accessed
-        public virtual List<BlogPost>? Posts { get; set; }
+        public virtual required User Author { get; set; }
 
+        public virtual List<Photo>? Photos { get; set; }
     }
 }
